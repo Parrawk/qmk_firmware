@@ -49,3 +49,23 @@ MIRYOKU_LAYER_LIST
   #define U_CUT S(KC_DEL)
   #define U_UND KC_UNDO
 #endif
+
+#ifdef RGB_MATRIX_ENABLE
+#    define RGB_TOG RM_TOGG
+#    define RGB_MOD RM_NEXT
+#    define RGB_HUI RM_HUEU
+#    define RGB_SAI RM_SATU
+#    define RGB_VAI RM_VALU
+#elif defined(RGBLIGHT_ENABLE)
+#    define RGB_TOG UG_TOGG
+#    define RGB_MOD UG_NEXT
+#    define RGB_HUI UG_HUEU
+#    define RGB_SAI UG_SATU
+#    define RGB_VAI UG_VALU
+#else
+#    define RGB_TOG KC_NO
+#    define RGB_MOD KC_NO
+#    define RGB_HUI KC_NO
+#    define RGB_SAI KC_NO
+#    define RGB_VAI KC_NO
+#endif
