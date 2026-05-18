@@ -1,0 +1,20 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        {
+            "type": "single",
+            "name": "CIRQUE_ENABLE",
+            "user_input": "Do you have a cirque?",
+            "default": "no"
+        },
+        {
+            "type": "value",
+            "name": "CIRQUE_DRIVER",
+            "values": ["spi", "i2c"],
+            "default": "spi",
+            "user_input": "Which cirque bus?",
+            "depends_on": { "CIRQUE_ENABLE": "yes" }
+        }
+    ]
+}

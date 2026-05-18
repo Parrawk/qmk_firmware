@@ -1,0 +1,19 @@
+{
+    "$schema": "../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        {
+            "type": "single",
+            "name": "FP_SVLINKY_V01",
+            "user_input": "Are you building with a svlinky v0.1? (y) if v0.1 and (n) if v0.2",
+            "default": "no"
+        },
+        { "$include": "src/fp_build_fragments/vik.json" },
+        {
+            "type": "single",
+            "name": "RGBLIGHT_ENABLE",
+            "user_input": "Does your VIK module have RGB?",
+            "default": "no"
+        }
+    ]
+}

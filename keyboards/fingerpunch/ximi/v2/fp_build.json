@@ -1,0 +1,61 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        {
+            "type": "value",
+            "name": "FP_POINTING_LEFT",
+            "values": ["none", "trackball", "cirque"],
+            "default": "none",
+            "user_input": "Pointing device on the left half?",
+            "emit_when_default": false,
+            "filename_token": "left_{value}"
+        },
+        {
+            "type": "value",
+            "name": "FP_POINTING_RIGHT",
+            "values": ["none", "trackball", "cirque"],
+            "default": "none",
+            "user_input": "Pointing device on the right half?",
+            "emit_when_default": false,
+            "filename_token": "right_{value}"
+        },
+        {
+            "type": "value",
+            "name": "FP_SPLIT_BUILD",
+            "values": ["none", "left", "right"],
+            "default": "none",
+            "user_input": "(Mixed pointing only) Build firmware for which half?",
+            "emit_when_default": false,
+            "filename_token": "split_{value}",
+            "depends_on": [
+                { "FP_POINTING_LEFT": "trackball", "FP_POINTING_RIGHT": "cirque" },
+                { "FP_POINTING_LEFT": "cirque", "FP_POINTING_RIGHT": "trackball" }
+            ]
+        },
+        {
+            "type": "one-of",
+            "names": ["RGBLIGHT_ENABLE", "RGB_MATRIX_ENABLE"],
+            "user_input": "No RGB, RGB light, RGB matrix?",
+            "default": "none"
+        },
+        {
+            "type": "single",
+            "name": "ENCODER_ENABLE",
+            "user_input": "Do you have one or more rotary encoders?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "AUDIO_ENABLE",
+            "user_input": "Do you have an audio buzzer?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "HAPTIC_ENABLE",
+            "user_input": "Do you have haptic feedback?",
+            "default": "no"
+        }
+    ]
+}

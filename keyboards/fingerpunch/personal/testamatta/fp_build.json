@@ -1,0 +1,7 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        { "$include": "src/fp_build_fragments/vik.json" }
+    ]
+}

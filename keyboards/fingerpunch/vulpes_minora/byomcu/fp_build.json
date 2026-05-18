@@ -1,0 +1,25 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        { "$include": "src/fp_build_fragments/vik.json" },
+        {
+            "type": "single",
+            "name": "RGBLIGHT_ENABLE",
+            "user_input": "Do you have LEDs?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "ENCODER_ENABLE",
+            "user_input": "Do you have one or more rotary encoders?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "AUDIO_ENABLE",
+            "user_input": "Do you have an audio buzzer?",
+            "default": "no"
+        }
+    ]
+}

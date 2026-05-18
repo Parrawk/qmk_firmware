@@ -1,0 +1,25 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        { "$include": "src/fp_build_fragments/vik.json" },
+        {
+            "type": "one-of",
+            "names": ["RGBLIGHT_ENABLE", "RGB_MATRIX_ENABLE"],
+            "user_input": "No RGB, RGB light, RGB matrix?",
+            "default": "none"
+        },
+        {
+            "type": "single",
+            "name": "ENCODER_ENABLE",
+            "user_input": "Do you have one or more rotary encoders?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "HAPTIC_ENABLE",
+            "user_input": "Do you have haptic feedback?",
+            "default": "no"
+        }
+    ]
+}

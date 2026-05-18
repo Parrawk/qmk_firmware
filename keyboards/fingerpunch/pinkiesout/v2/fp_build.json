@@ -1,0 +1,51 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        {
+            "type": "value",
+            "name": "CONVERT_TO",
+            "user_input": "Build with CONVERT_TO=stemcell?",
+            "values": ["stemcell"],
+            "default": "stemcell"
+        },
+        {
+            "type": "single",
+            "name": "CIRQUE_ENABLE",
+            "user_input": "Do you have a cirque?",
+            "default": "no"
+        },
+        {
+            "type": "value",
+            "name": "CIRQUE_DRIVER",
+            "values": ["spi", "i2c"],
+            "default": "spi",
+            "user_input": "Which cirque bus?",
+            "depends_on": { "CIRQUE_ENABLE": "yes" }
+        },
+        {
+            "type": "one-of",
+            "names": ["RGBLIGHT_ENABLE", "RGB_MATRIX_ENABLE"],
+            "user_input": "No RGB, RGB light, RGB matrix?",
+            "default": "none"
+        },
+        {
+            "type": "single",
+            "name": "ENCODER_ENABLE",
+            "user_input": "Do you have one or more rotary encoders?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "AUDIO_ENABLE",
+            "user_input": "Do you have an audio buzzer?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "HAPTIC_ENABLE",
+            "user_input": "Do you have haptic feedback?",
+            "default": "no"
+        }
+    ]
+}

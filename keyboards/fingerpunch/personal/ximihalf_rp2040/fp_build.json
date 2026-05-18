@@ -1,0 +1,47 @@
+{
+    "$schema": "../../src/schemas/fp_build.jsonschema",
+
+    "options": [
+        {
+            "type": "one-of",
+            "names": ["CIRQUE_ENABLE", "FP_TRACKBALL_ENABLE"],
+            "user_input": "Pointing device?",
+            "default": "none",
+            "sub_options": {
+                "CIRQUE_ENABLE": [
+                    {
+                        "type": "value",
+                        "name": "CIRQUE_DRIVER",
+                        "values": ["spi", "i2c"],
+                        "default": "spi",
+                        "user_input": "Which cirque bus?"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "one-of",
+            "names": ["RGBLIGHT_ENABLE", "RGB_MATRIX_ENABLE"],
+            "user_input": "No RGB, RGB light, RGB matrix?",
+            "default": "none"
+        },
+        {
+            "type": "single",
+            "name": "ENCODER_ENABLE",
+            "user_input": "Do you have one or more rotary encoders?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "AUDIO_ENABLE",
+            "user_input": "Do you have an audio buzzer?",
+            "default": "no"
+        },
+        {
+            "type": "single",
+            "name": "HAPTIC_ENABLE",
+            "user_input": "Do you have haptic feedback?",
+            "default": "no"
+        }
+    ]
+}
