@@ -25,12 +25,14 @@ BLUETOOTH_ENABLE = no       # Enable Bluetooth with the Adafruit EZ-Key HID
 AUDIO_ENABLE = no           # Audio output on port C6
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
 ENCODER_ENABLE = no
-OLED_ENABLE = no
+OLED_ENABLE = yes
 # EXTRAFLAGS     += -flto     # macros disabled, if you need the extra space
 MOUSEKEY_ENABLE = no
 
 SPLIT_KEYBOARD = yes        # Use shared split_common code
 
 LAYOUTS = split_3x5_3       # Community layout support
+RGBLIGHT_ENABLE = yes
+CONVERT_TO = elite_pi
 
 include keyboards/fingerpunch/src/rules.mk
