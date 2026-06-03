@@ -12,7 +12,7 @@ U_NA,              KC_ALGR,           TD(U_TD_U_NUM),    TD(U_TD_U_NAV),    U_NA
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              KC_ENT,            KC_BSPC,           KC_DEL,            U_NP,              U_NP
 
 #define MIRYOKU_LAYER_MOUSE \
-TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   TD(U_TD_U_GAME),   U_NU,              MS_WHLL,           MS_UP,           MS_WHLR,           MS_WHLU,           \
+TD(U_TD_BOOT),     TD(U_TD_U_TAP),    TD(U_TD_U_EXTRA),  TD(U_TD_U_BASE),   TD(U_TD_U_GAME),   U_NU,              MS_WHLL,           MS_UP,             MS_WHLR,           MS_WHLU,           \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              U_NU,              MS_LEFT,           MS_DOWN,           MS_RGHT,           MS_WHLD,           \
 U_NA,              KC_ALGR,           TD(U_TD_U_SYM),    TD(U_TD_U_MOUSE),  U_NA,              U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,              MS_BTN2,           MS_BTN1,           MS_BTN3,           U_NP,              U_NP
